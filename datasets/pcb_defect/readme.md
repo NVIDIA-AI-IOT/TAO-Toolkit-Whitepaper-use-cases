@@ -1,0 +1,1 @@
+pcb defect dataset will be downloaded to this folder by the jupyter notebook

@@ -1,0 +1,1 @@
+Download the FLIR dataset from here https://www.flir.com/oem/adas/adas-dataset-form/ and place all 16 parts into this directory
