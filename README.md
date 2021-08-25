@@ -82,10 +82,10 @@ git clone ssh://git@gitlab-master.nvidia.com:12051/sochoa/tao_experiments.git
 
 Download required datasets 
 
-Experiment 1 will automatically download the dataset
-
-Experiment 2 requires the FLIR infrared dataset. This can be downloaded from this link 
+Experiment 1 requires the FLIR infrared dataset. This can be downloaded from this link 
 https://www.flir.com/oem/adas/adas-dataset-form/ 
+
+Experiment 2 will automatically download the dataset
 
 The dataset comes in a split archive with 16 parts. All 16 parts must be downloaded and placed in datasets/infrared
 
