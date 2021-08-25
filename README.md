@@ -4,7 +4,32 @@ This repository contains all code and instructions needed to recreate the result
 
 
 # Experiment Result Summary 
-## Experiment 1 Data Augmentation
+## Experiment 1 Adapting to different camera types
+PeopleNet transfer learning to infrared images 
+This experiment shows how pretrained models from NVIDIA such as peoplenet can be trained across image domains to reduce the number of images needed to train and improve the accuracy of the model.
+
+| Dataset Size | 1256 | 2514 | 3647 | 4779 | 6288 |
+| ----- | ----- | ---- | ---- | ---- | ---- |
+| mAP with PeopleNet | 65.58% | 78.14% | 81.25% | 82.21% | 82.67% |
+| mAP without PeopleNet | 44.81% | 63.41% | 70.89% | 73.44% | 77.27%| 
+
+## Experiment 2 Quick prototyping with a small dataset
+This experiment shows how data augmentation can be used to improve an object detection model on a small dataset.
+
+Results
+### 100 Image Subset Trainings
+| Dataset | Images | mAP | +Online Aug mAP |
+| ------ | ------ | ------ | ------ |
+| 100 x1 | 100 | 36.06% | 50.01% |
+| Offline Aug 100 x10 | 1,000 | 66.31% | 75.55% |
+| Offline Aug 100 x20 | 2,000 | 73.19% | 78.70% |
+
+### 500 Image Subset Trainings
+| Dataset | Images | mAP | +Online Aug mAP |
+| ------ | ------| ------ | ------ | 
+| 500 x1 | 500 | 82.32% | 93.01% | 
+| Offline Aug 500 x10 | 5,000 | 91.34% | 95.11% |
+| Offline Aug 500 x20 | 10,000 | 93.80% | 95.13% |
 Data Augmentation with PCB Defects
 This experiment shows how data augmentation can be used to improve an object detection model on a small dataset.
 
@@ -24,16 +49,7 @@ Results
 | Offline Aug 500 x20 | 10,000 | 93.80% | 95.13% |
 
 
-## Experiment 2 PeopleNet Domain Transfer
-PeopleNet transfer learning to infrared images 
-This experiment shows how pretrained models from NVIDIA such as peoplenet can be trained across image domains to reduce the number of images needed to train and improve the accuracy of the model.
-
-| Dataset Size | 1256 | 2514 | 3647 | 4779 | 6288 |
-| ----- | ----- | ---- | ---- | ---- | ---- |
-| mAP with PeopleNet | 65.58% | 78.14% | 81.25% | 82.21% | 82.67% |
-| mAP without PeopleNet | 44.81% | 63.41% | 70.89% | 73.44% | 77.27%| 
-
-## Experiment 3 PeopleNet Add Custom Class
+## Experiment 3 Add new classes of objects to an existing AI model
 PeoplNet add a custom class
 This experiment shows how you can take PeopleNet and add a custom class while still retaining its ability to detect people in addition to the custom class. This technique can be used on any of our pretrained models. In this experiment we add a helmet class to PeopleNet.
 
@@ -90,6 +106,10 @@ jupyter notebook --allow-root --port=8889 --ip=0.0.0.0 &
 ## Running Experiments
 The experiments can now be run by opening the experiment notebook and running all the cells. 
 
-[Experiment 1 Notebook](workspace/pcb_data_aug/Process&Train_PCB.ipynb): /tlt_exp/pcb_data_aug/Process&Train_PCB.ipynb  
-[Experiment 2 Notebook](workspace/peoplenet_helmet/Process&Train_Helmet.ipynb): /tlt_exp/peoplenet_helmet/Process&Train_Helmet.ipynb  
+[Experiment 1 Notebook](workspace/peoplenet_helmet/Process&Train_Helmet.ipynb): /tlt_exp/peoplenet_helmet/Process&Train_Helmet.ipynb  
+[Experiment 2 Notebook](workspace/pcb_data_aug/Process&Train_PCB.ipynb): /tlt_exp/pcb_data_aug/Process&Train_PCB.ipynb
 [Experiment 3 Notebook](workspace/peoplenet_ir/Process&Train_IR.ipynb): /tlt_exp/peoplenet_ir/Process&Train_IR.ipynb  
+
+## References:
+[TAO Toolkit usecases blog] https://developer.nvidia.com/tao-toolkit-usecases-whitepaper/1-introduction
+
