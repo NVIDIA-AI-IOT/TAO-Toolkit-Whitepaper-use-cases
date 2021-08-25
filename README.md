@@ -1,6 +1,6 @@
 # TAO Experiments
 
-This repository contains all code and instructions needed to recreate the results for each experiment shown in the TAO white paper **link**.
+This repository contains all code and instructions needed to recreate the results for each experiment shown in the TAO white paper **https://developer.nvidia.com/tao-toolkit-usecases-whitepaper/1-introduction**.
 
 
 # Experiment Result Summary 
@@ -109,7 +109,3 @@ The experiments can now be run by opening the experiment notebook and running al
 [Experiment 1 Notebook](workspace/peoplenet_helmet/Process&Train_Helmet.ipynb): /tlt_exp/peoplenet_helmet/Process&Train_Helmet.ipynb  
 [Experiment 2 Notebook](workspace/pcb_data_aug/Process&Train_PCB.ipynb): /tlt_exp/pcb_data_aug/Process&Train_PCB.ipynb
 [Experiment 3 Notebook](workspace/peoplenet_ir/Process&Train_IR.ipynb): /tlt_exp/peoplenet_ir/Process&Train_IR.ipynb  
-
-## References:
-[TAO Toolkit usecases blog] https://developer.nvidia.com/tao-toolkit-usecases-whitepaper/1-introduction
-
