@@ -77,7 +77,7 @@ ngc --help
 ## Preparation
 First Clone the repository
 ```
-git clone ssh://git@gitlab-master.nvidia.com:12051/sochoa/tao_experiments.git
+git clone git@github.com:NVIDIA-AI-IOT/TAO-Toolkit-Whitepaper-use-cases.git
 ```
 
 Download required datasets 
