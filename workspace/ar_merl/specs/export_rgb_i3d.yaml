@@ -1,0 +1,26 @@
+model_config:
+  model_type: rgb
+  backbone: i3d
+  rgb_seq_length: 16
+  input_type: 3d
+  sample_strategy: consecutive 
+  dropout_ratio: 0.0
+dataset_config:
+  label_map:
+    Hand_in_Shelf: 0
+    Inspect_Product: 1
+    Inspect_Shelf: 2
+    Reach_to_Shelf: 3
+    Retract_from_Shelf: 4
+  output_shape:
+  - 224
+  - 224
+  batch_size: 32
+  workers: 8
+  augmentation_config:
+   # multi_scale_crop: True
+    scales: [1.0, 0.875]
+    horizontal_flip_prob: 0.5
+    rgb_input_mean: [0.485, 0.456, 0.406]
+    rgb_input_std: [0.229, 0.224, 0.225]
+    val_center_crop: False

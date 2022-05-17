@@ -1,0 +1,44 @@
+output_dir: /results/rgb_3d_ptm
+encryption_key: nvidia_tao
+#gpu_ids: [0]
+model_config:
+  model_type: rgb
+  input_type: "3d"
+  backbone: i3d
+  rgb_seq_length: 16
+  #rgb_pretrained_model_path: /workspace/action_recognition/i3d_pretrained/rgb_imagenet_kinetics.pt
+  rgb_pretrained_num_classes: 400 # if conti training on the merl dataset set is to 5 . if training with imagenet_kinetics then set it to 400
+  sample_strategy: consecutive
+  sample_rate: 1
+  dropout_ratio: 0.5
+train_config:
+  optim:
+    lr: 0.01
+    momentum: 0.9
+    weight_decay: 0.0005
+    lr_scheduler: MultiStep
+    lr_steps: [25, 50, 85]
+    lr_decay: 0.1
+  epochs: 100
+dataset_config:
+  train_dataset_dir: /data/train
+  val_dataset_dir: /data/val
+  label_map:
+    Hand_in_Shelf: 0
+    Inspect_Product: 1
+    Inspect_Shelf: 2
+    Reach_to_Shelf: 3
+    Retract_from_Shelf: 4
+    
+  output_shape:
+  - 224
+  - 224
+  batch_size: 8
+  workers: 8
+  augmentation_config:
+   # multi_scale_crop: True
+    scales: [1.0, 0.875]
+    horizontal_flip_prob: 0.5
+    rgb_input_mean: [0.485, 0.456, 0.406]
+    rgb_input_std: [0.229, 0.224, 0.225]
+    val_center_crop: True

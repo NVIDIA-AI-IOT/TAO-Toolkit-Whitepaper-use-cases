@@ -57,6 +57,17 @@ This experiment shows how you can take PeopleNet and add a custom class while st
 | ---- | --- | -- | -- | -- | -- |
 |Helmet AP%| 51% | 68% | 77% | 77% | 80%|
 
+## Experiment 4 Autonomous shopping for frictionless customer experience
+This experiment shows how to adapt action recognition model for retail usecase with TAO
+
+|Class Name | Accuracy |
+| ---- | ---- |
+|Hand in shelf | 61.5% |
+|Inspect product | 48.67% |
+|Inspect shelf | 95.73% |
+|Reach to shelf | 89.63% |
+|Retract from shelf | 89.33% |
+
 # How To Run Experiments
 
 This repository has been setup to recreate all results shown above using jupyter notebooks for each experiment. 
@@ -91,9 +102,11 @@ The dataset comes in a split archive with 16 parts. All 16 parts must be downloa
 
 Experiment 3 requires a helmet dataset from kaggle. This can be downoaded from this link 
 https://www.kaggle.com/andrewmvd/helmet-detection
-The download should be named archive.zip and must be places in datasets/helmet 
+The download should be named archive.zip and must be places in datasets/helmet
 
 Do not rename any downloaded datasets
+
+Experiment 4 reuires user to download merl shopping dataset:https://www.merl.com/demos/merl-shopping-dataset. The data needs to be split into train, test validation. The list of streams we used in this experiment for each data split is mentioned in workspace/ar_merl folder. 
 
 
 
@@ -106,6 +119,7 @@ jupyter notebook --allow-root --port=8889 --ip=0.0.0.0 &
 ## Running Experiments
 The experiments can now be run by opening the experiment notebook and running all the cells. 
 
-[Experiment 1 Notebook](workspace/peoplenet_helmet/Process&Train_Helmet.ipynb): /tlt_exp/peoplenet_helmet/Process&Train_Helmet.ipynb  
-[Experiment 2 Notebook](workspace/pcb_data_aug/Process&Train_PCB.ipynb): /tlt_exp/pcb_data_aug/Process&Train_PCB.ipynb
-[Experiment 3 Notebook](workspace/peoplenet_ir/Process&Train_IR.ipynb): /tlt_exp/peoplenet_ir/Process&Train_IR.ipynb  
+[Experiment 1 Notebook](workspace/peoplenet_helmet/Process&Train_Helmet.ipynb)
+[Experiment 2 Notebook](workspace/pcb_data_aug/Process&Train_PCB.ipynb)
+[Experiment 3 Notebook](workspace/peoplenet_ir/Process&Train_IR.ipynb)
+[Experiment 4 Notebook]( workspace/ar_merl/actionrecognitionnet.ipynb)  

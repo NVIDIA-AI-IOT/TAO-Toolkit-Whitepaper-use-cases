@@ -1,0 +1,12 @@
+#streams used for validation
+
+13_1_crop.mp4
+16_1_crop.mp4
+20_1_crop.mp4
+21_1_crop.mp4
+22_1_crop.mp4
+30_1_crop.mp4
+40_1_crop.mp4
+41_1_crop.mp4
+7_1_crop.mp4
+9_1_crop.mp4
